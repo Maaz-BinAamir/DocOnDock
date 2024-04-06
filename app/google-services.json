@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "124149695649",
+    "project_id": "doctorconsultancyapp",
+    "storage_bucket": "doctorconsultancyapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124149695649:android:f6ba71c328de90dc46dce0",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124149695649-719j26126p711qlbqa8b5d5iqgl5mgb7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv-3GzgrxLvkfx0VsocE5K5Oe-92RaLNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124149695649-719j26126p711qlbqa8b5d5iqgl5mgb7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
