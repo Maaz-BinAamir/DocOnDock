@@ -5,25 +5,28 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/turquoise_ombre"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/txtMain"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:fontFamily="cursive"
-        android:text="Hello User!"
+        android:text="Hello User"
+        android:textColor="#FFF"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.318" />
+        app:layout_constraintVertical_bias="0.415" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:textColor="#bb4500"
         android:onClick="onLogOutClick"
         android:text="Log Out"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,7 +34,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtMain"
-        app:layout_constraintVertical_bias="0.675" />
+        app:layout_constraintVertical_bias="0.379" />
 
     <TextView
         android:id="@+id/username"

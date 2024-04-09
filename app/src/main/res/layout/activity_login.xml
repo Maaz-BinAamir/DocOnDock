@@ -5,20 +5,22 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/turquoise_ombre"
     tools:context=".Login">
 
     <TextView
         android:id="@+id/txtMain"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:fontFamily="cursive"
         android:text="Login"
+        android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19999999" />
+        app:layout_constraintVertical_bias="0.422" />
 
     <Button
         android:id="@+id/button2"
@@ -53,7 +55,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.573" />
 
     <EditText
         android:id="@+id/editTextUserEmailAddress"
@@ -68,5 +71,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtMain"
         app:layout_constraintVertical_bias="0.891" />
+
+    <ImageView
+        android:layout_width="309dp"
+        android:layout_height="294dp"
+        android:src="@drawable/ot"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="501dp" />
+
+    <ImageView
+        android:layout_width="249dp"
+        android:layout_height="237dp"
+        android:src="@drawable/icon"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="51dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
