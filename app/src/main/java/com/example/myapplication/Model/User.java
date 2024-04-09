@@ -1,6 +1,7 @@
 package com.example.myapplication.Model;
 
 public class User {
+    public String getImageURL;
     private  String id;
     private String username;
     private String imageURL;

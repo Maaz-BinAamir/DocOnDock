@@ -24,6 +24,12 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".MainLanguage"
+            />
+        <activity
+            android:name=".Tablayout"
+            />
+        <activity
             android:name=".MainActivity"
             />
     </application>
