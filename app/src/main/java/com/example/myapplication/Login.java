@@ -25,8 +25,19 @@ import com.google.firebase.database.DatabaseReference;
 
 public class Login extends AppCompatActivity {
     private FirebaseAuth mAuth;
-    DatabaseReference reference;
 
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            Intent intent = new Intent(getApplicationContext(), MainLanguage.class);
+            startActivity(intent);
+            finish();
+            Toast.makeText(Login.this, "Already Signed in.",
+                    Toast.LENGTH_SHORT).show();
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,5 +87,11 @@ public class Login extends AppCompatActivity {
                     }
                 });
 
+    }
+
+    public void onHaveNotRegistered (View view){
+        Intent intent = new Intent(getApplicationContext(), Register.class);
+        startActivity(intent);
+        finish();
     }
 }

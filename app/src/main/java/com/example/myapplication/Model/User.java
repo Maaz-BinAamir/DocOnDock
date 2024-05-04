@@ -2,14 +2,16 @@ package com.example.myapplication.Model;
 
 public class User {
     public String getImageURL;
-    private  String id;
+    private String id;
     private String username;
     private String imageURL;
+    private String role;
 
-    public User(String id, String username, String imageURL) {
+    public User(String id, String username, String imageURL, String role) {
         this.id = id;
         this.username = username;
         this.imageURL = imageURL;
+        this.role = role;
     }
 
     public User() {
@@ -37,5 +39,13 @@ public class User {
 
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/whitebackground2"
+    tools:context=".Dashboard_Doctor">
+
+  <ImageView
+      android:layout_width="295dp"
+      android:layout_height="240dp"
+      android:layout_marginStart="248dp"
+      android:layout_marginTop="344dp"
+      android:rotation="-47"
+      android:src="@drawable/ot2"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageView
+      android:layout_width="288dp"
+      android:layout_height="260dp"
+      android:layout_marginTop="516dp"
+      android:layout_marginEnd="188dp"
+      android:rotation="-47"
+      android:src="@drawable/ot2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageView
+      android:id="@+id/imageView2"
+      android:layout_width="604dp"
+      android:layout_height="500dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/dashboard" />
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingStart="16dp"
+      android:paddingTop="8dp"
+      android:paddingEnd="16dp"
+      android:paddingBottom="8dp"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.035" />
+
+  <TextView
+      android:id="@+id/textView3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Hi"
+      android:textColor="#fff"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.114"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.079" />
+
+  <TextView
+      android:id="@+id/username"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_vertical"
+      android:text="Username"
+      android:textColor="#fff"
+      android:textSize="28sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.159"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.125" />
+
+  <de.hdodenhof.circleimageview.CircleImageView
+      android:id="@+id/profile_image"
+      android:layout_width="60dp"
+      android:layout_height="60dp"
+      android:src="@mipmap/ic_launcher"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.768"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.075" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/constraintLayout"
+      android:layout_width="448dp"
+      android:layout_height="415dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.481">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="389dp"
+        android:layout_height="82dp"
+        android:background="@drawable/whitebackground3"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.118">
+
+      <Button
+          android:id="@+id/buttonRequests"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@android:color/transparent"
+          android:text="Appointment Requests"
+          android:textColor="#303130"
+          android:textSize="18dp"
+          android:textStyle="bold"
+          android:onClick="onClickAppointmentRequests"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="389dp"
+        android:layout_height="82dp"
+        android:background="@drawable/whitebackground3"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.418">
+
+      <Button
+          android:id="@+id/buttonCurrent"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@android:color/transparent"
+          android:text="Current Appointments"
+          android:textColor="#303130"
+          android:textSize="18dp"
+          android:textStyle="bold"
+          android:onClick="onClickCurrentAppointments"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="389dp"
+        android:layout_height="82dp"
+        android:background="@drawable/whitebackground3"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718">
+
+      <Button
+          android:id="@+id/buttonChats"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@android:color/transparent"
+          android:text="Chats"
+          android:textColor="#303130"
+          android:textSize="18dp"
+          android:textStyle="bold"
+          android:onClick="onClickChats"/>
+    </LinearLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

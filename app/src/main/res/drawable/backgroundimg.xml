@@ -1,0 +1,16 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background -->
+    <item android:drawable="@drawable/whitebackground2" />
+
+    <!-- Watermark Image -->
+    <item
+        android:drawable="@drawable/chatimg3"
+        android:gravity="center"
+        android:width="200dp"
+        android:height="200dp"
+        android:alpha="0.3"
+        android:top="100dp"
+        android:bottom="100dp"
+        android:left="30dp"
+        android:right="30dp"/>
+</layer-list>

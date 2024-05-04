@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,26 +13,45 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
-        tools:targetApi="31">
+        tools:targetApi="31" >
         <activity
-            android:name=".Login"
+            android:name=".Appointment_Requests"
+            android:exported="false" />
+        <activity
+            android:name=".Current_Appointments"
+            android:exported="false" />
+        <activity
+            android:name=".Book_Appointment"
+            android:exported="false" />
+        <activity
+            android:name=".Recommend_Doctor"
+            android:exported="false" />
+        <activity
+            android:name=".Register_Doctor"
+            android:exported="false" />
+        <activity
+            android:name=".Register_Patient"
+            android:exported="false" />
+        <activity
+            android:name=".MessageActivity"
             android:exported="false" />
         <activity
             android:name=".Register"
-            android:exported="true">
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainLanguage"
-            />
-        <activity
-            android:name=".Tablayout"
-            />
-        <activity
-            android:name=".MainActivity"
-            />
+        <activity android:name=".MainLanguage" />
+        <activity android:name=".Dashboard_Patient" />
+        <activity android:name=".Tablayout" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Dashboard_Doctor" />
     </application>
+
 </manifest>
