@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.widget.AdapterView;
@@ -21,8 +22,19 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 
+import com.example.myapplication.Model.User;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 public class MainLanguage extends AppCompatActivity {
+    FirebaseUser firebaseUser;
+    DatabaseReference reference;
     Spinner spinner;
     Button next;
 
@@ -31,6 +43,8 @@ public class MainLanguage extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_language);
         spinner=findViewById(R.id.spinner);
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("English");
         arrayList.add("Urdu");
@@ -61,11 +75,28 @@ public class MainLanguage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getApplicationContext(), Dashboard_Doctor.class);
+                reference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.child("role").getValue(String.class).equals("doctor")){
+                            Intent intent = new Intent(getApplicationContext(), Dashboard_Doctor.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(intent);
+                            finish();
+                        }
+                        if (snapshot.child("role").getValue(String.class).equals("patient")){
+                            Intent intent = new Intent(getApplicationContext(), Dashboard_Patient.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(intent);
+                            finish();
+                        }
+                    }
 
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-                finish();
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
             }
         });
 
