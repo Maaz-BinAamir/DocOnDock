@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.DocOnDock;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -16,22 +16,38 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
 
 public class Login extends AppCompatActivity {
     private FirebaseAuth mAuth;
-    DatabaseReference reference;
-
+    LottieAnimationView laView3;
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            Intent intent = new Intent(getApplicationContext(), MainLanguage.class);
+            startActivity(intent);
+            finish();
+            Toast.makeText(Login.this, "Already Signed in.",
+                    Toast.LENGTH_SHORT).show();
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
+
+        laView3= findViewById(R.id.loadinganim1);
+        laView3.setAnimation(R.raw.loadingmain);
+        laView3.playAnimation();
+        laView3.loop(true);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -64,7 +80,7 @@ public class Login extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
                             Toast.makeText(Login.this, "Signed in Successfully.",
                                     Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                            Intent intent = new Intent(getApplicationContext(), MainLanguage.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK| Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(intent);
                             finish();
@@ -76,5 +92,11 @@ public class Login extends AppCompatActivity {
                     }
                 });
 
+    }
+
+    public void onHaveNotRegistered (View view){
+        Intent intent = new Intent(getApplicationContext(), Register.class);
+        startActivity(intent);
+        finish();
     }
 }

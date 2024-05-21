@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.DocOnDock;
 
 import android.content.Context;
 

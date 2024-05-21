@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.DocOnDock;
 
 import org.junit.Test;
 

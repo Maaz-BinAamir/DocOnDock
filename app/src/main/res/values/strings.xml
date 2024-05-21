@@ -1,4 +1,41 @@
 <resources>
-    <string name="app_name">MyApplication</string>
+    <string name="app_name">DocOnDock</string>
     <string name="login_text">Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Strings used for fragments for navigation -->
+    <!-- TODO: Remove or change this placeholder text -->
+    //language
+    <string name="choose_language">Choose Language</string>
+    <string name="next">Next</string>
+    //book an appointment
+    <string name="when_did_you_start_feeling_pain">When did you start feeling pain?</string>
+    <string name="book_an_appointment">Book an Appointment</string>
+    <string name="where_are_you_feeling_pain">Where are you feeling pain?</string>
+    <string name="how_did_it_happen">How did it happen?</string>
+    <string name="if_you_are_unsure_about_this_click_on_recommend">If you are unsure about this, click on recommend</string>
+    <string name="recommend">Recommend</string>
+    <string name="book">Book</string>
+    <string name="back">Back</string>
+    <string name="recommend_a_doctor">Recommend a Doctor</string>
+    <string name="hi">Hi</string>
+    <string name="current_appointments">Current Appointments</string>
+    <string name="chats">Chats</string>
+    <string name="appointment_requests">Appointment Requests</string>
+    <string name="cardiologist">Cardiologist</string>
+    <string name="dentist">Dentist</string>
+    <string name="psychiatrist">Psychiatrist</string>
+    <string name="pediatrician">Pediatrician</string>
+    <string name="surgeon">Surgeon</string>
+    <string name="neurologist">Neurologist</string>
+    <string name="ent">ENT</string>
+    <string name="ophthalmologist">Ophthalmologist</string>
+    <string name="gynaecologist_obstetrician">Gynaecologist/Obstetrician</string>
+    <string name="orthopedist">Orthopedist</string>
+    <string name="gastroenterologist">Gastroenterologist</string>
+    <string name="doctor_speciality">Doctor Speciality</string>
+
+    <string name="name">Name</string>
+
+
 </resources>
