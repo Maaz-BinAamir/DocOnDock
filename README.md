@@ -1,8 +1,17 @@
-=> DocOnDock is an android app created with the target to provide people who are not able to readily access doctors to consult due to geographic and time constraints.
+🩺 DocOnDock — Telemedicine Android App
 
-**=== KEY FEATURES ===**
-> DocOnDock enables you to **book an appointment** with the doctor, **chat** wtih them and **video call** them at the time of the appointment.
-> DocOnDock provides a seperate dashboards for both patients and doctors.
-> DocOnDock also has **AI** doctor suggestion system which after asking you details of the problem you are facing advise a doctor.
-> It uses a functional Database which stores the records of the patient and details of the doctors.
-> It has a fully working login system.
+DocOnDock is a telemedicine Android application designed to help people consult doctors even when geographic distance, time constraints, or accessibility issues make physical visits difficult.
+The platform connects patients and doctors through appointments, chat, and video calls — making healthcare more reachable and efficient.
+
+📱 Overview
+
+DocOnDock provides a complete remote consultation experience:
+
+- Book doctor appointments
+- Real-time chat with doctors
+- Video consultations at scheduled times
+- AI-powered doctor suggestions
+- Separate dashboards for patients and doctors
+- Secure authentication and medical record storage
+
+The goal is to reduce healthcare barriers by bringing consultation directly to the user’s device.
